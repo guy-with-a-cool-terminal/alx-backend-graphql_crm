@@ -4,27 +4,31 @@ entry point for all grapghql operations
 
 '''
 import graphene
+from crm.schema import Query as CRMQuery, Mutation as CRMMutation
 
-class Query(graphene.ObjectType):
+class Query(CRMQuery, graphene.ObjectType):
     '''
     
     root query class --- defines what queries clients can make 
+    inherits from crm
     
     '''
-    # define a fielda named helli that returns a string
-    hello = graphene.String(
-        description="Simple greeting query to test our setup"
-    )
+    pass
+
+class Mutation(CRMMutation, graphene.ObjectType):
+    """
+    Main Mutation class that inherits all CRM mutations.
     
-    def resolve_hello(self,info):
-        ''' 
-        
-        resolver function for the hello field 
-        
-        '''
-        return "Hello, GraphQL!"
+    This gives us access to:
+    - createCustomer
+    - bulkCreateCustomers  
+    - createProduct
+    - createOrder
+    """
+    pass
 
 # main schema object
 schema = graphene.Schema(
     query=Query,
+    mutation=Mutation
 )

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd /home/Bri/Desktop/Brian/alx-backend-graphql_crm/alx_backend_graphql
-
+# manage.py
 # django management command to delete inactive customers
 python3 manage.py shell << EOF
 from crm.models import Customer,Order

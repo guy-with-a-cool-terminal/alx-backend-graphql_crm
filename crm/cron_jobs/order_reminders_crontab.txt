@@ -1,0 +1,1 @@
+0 8 * * * /usr/bin/python3 /home/Bri/Desktop/Brian/alx-backend-graphql_crm/crm/cron_jobs/cron_jobs/send_order_reminders.py >> /tmp/order_reminders_log.txt 2>&1

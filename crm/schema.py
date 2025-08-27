@@ -7,6 +7,8 @@ from django.db import transaction
 import re
 from .models import Customer, Product, Order
 
+# UpdateLowStockProducts", "10", "from crm.models import Product"]
+
 # graphql types(converts models to grapghql types)
 class CustomerType(DjangoObjectType):
     class Meta:

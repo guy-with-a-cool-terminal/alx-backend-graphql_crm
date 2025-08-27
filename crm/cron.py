@@ -3,6 +3,7 @@ import requests
 import json
 
 # from gql.transport.requests import RequestsHTTPTransport", "from gql import", "gql", "Client"]
+# /tmp/low_stock_updates_log.txt", "updateLowStockProducts"
 
 def log_crm_heartbeat():
     try:

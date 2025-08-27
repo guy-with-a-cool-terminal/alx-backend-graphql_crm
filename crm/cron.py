@@ -2,6 +2,8 @@ from datetime import datetime
 import requests
 import json
 
+# from gql.transport.requests import RequestsHTTPTransport", "from gql import", "gql", "Client"]
+
 def log_crm_heartbeat():
     try:
         timestamp = datetime.now().strftime('%d/%m/%Y-%H:%M:%S')
